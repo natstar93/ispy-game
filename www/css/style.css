@@ -1,1 +1,33 @@
 /* Empty. Add your own CSS if you like */
+
+.clue-popover {
+  width: 90%;
+  border: grey 0.1em solid;
+  border-radius: 0.5em;
+
+}
+
+.clue-pictures {
+  float: right;
+  width: 35%;
+  text-align: center;
+  margin: 1em;
+}
+
+.clue-image {
+  height: 8em;
+  width: 8em;
+  border-radius: 4em;
+  box-shadow: 0.5em;
+}
+
+.clue-list{
+  width: 65%
+}
+
+.clue {
+  border: grey 0.1em solid;
+  border-radius: 0.5em;
+  margin: 1em;
+  text-align: center;
+}
