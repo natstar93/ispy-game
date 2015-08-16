@@ -1,9 +1,9 @@
 describe('Changing views', function() {
 
-  var homeNav = element(by.className('tab-nav')).element(by.className('ion-images'));
+  var photoAlbumNav = element(by.className('tab-nav')).element(by.className('ion-images'));
  
   beforeEach(function() {
-    browser.get('http://192.168.50.174:8100');
+    browser.get('http://localhost:8100');
   });
 
   it('has a title', function() {
@@ -11,11 +11,13 @@ describe('Changing views', function() {
   });
 
   it('should start on Homepage', function() {
-    expect(element(by.css('ion-nav-bar')).getText()).toContain('iSpy London');
+    var elm = element(by.className('tab-item-active'));
+    expect(elm.getAttribute("icon-on")).toContain("ion-home");
   });
 
   it('navigates to Photo Album', function() {
-    homeNav.click();
-    expect(element(by.css('ion-nav-bar')).getText()).toContain('Photo Album');
+    photoAlbumNav.click();
+    var elm = element(by.className('tab-item-active'));
+    expect(elm.getAttribute("icon-on")).toContain("ion-images");
   });
 });
