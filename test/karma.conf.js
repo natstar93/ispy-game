@@ -20,6 +20,7 @@ module.exports = function(config) {
       'www/lib/angular-resource/angular-resource.js',
       'www/lib/angular-mocks/angular-mocks.js',
       'www/js/**/*.js',
+      'test/e2e/views.karma.spec.js'
     ],
 
 
