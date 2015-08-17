@@ -1,6 +1,9 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['starter.services'])
 
-.controller('HomeCtrl', function($scope, $ionicModal) {
+.controller('HomeCtrl', function($scope, $ionicModal, ImageService, $state, $cordovaCamera, $cordovaFile) {
+
+  $scope.imageService = ImageService;
+
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -56,4 +59,6 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('PhotoAlbumCtrl', function($scope) {});
+.controller('PhotoAlbumCtrl', function($scope, ImageService, $cordovaCamera, $cordovaFile) {
+  $scope.imageService = ImageService;
+});
