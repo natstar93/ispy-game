@@ -16,6 +16,13 @@ angular.module('starter.controllers', [])
             image: 'To add image',
             map: 'To add map'
             },
+    taxi: {name: 'Black Cab',
+            clue1: 'TAXI!',
+            clue2: 'TBC',
+            clue3: 'TBC',
+            image: 'To add image',
+            map: 'To add map'
+          },
     bigben: {name: 'Big Ben',
             clue1: 'Dong',
             clue2: 'TBC',
