@@ -1,0 +1,15 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">{{selectedname.name}}</h1>
+    <a class="icon icon-right ion-close-round" ng-click="closeModal()"></a>
+  </ion-header-bar>
+  <ion-content>
+    <ul>
+      <li>{{selectedname.clue1}}</li>
+      <li>{{selectedname.clue2}}</li>
+      <li>{{selectedname.clue3}}</li>
+    </ul>
+    <img class='clue-image' ng-src={{selectedname.image}}>
+    <img class='clue-image' ng-src={{selectedname.map}}>
+  </ion-content>
+</ion-modal-view>
