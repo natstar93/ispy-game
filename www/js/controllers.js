@@ -11,8 +11,7 @@ angular.module('starter.controllers', [])
 .service('ImageService', function($state, $cordovaCamera, $cordovaFile) {
 
   var self = this;
-
-  self.images = [];
+  self.images = JSON.parse(window.localStorage.images || '[]');
 
   self.addImage = function(photoIndex) {
 
@@ -29,6 +28,8 @@ angular.module('starter.controllers', [])
     $cordovaCamera.getPicture(options).then(function(imageData) {
 
       self.images[photoIndex] = {url: imageData};
+
+      window.localStorage.images = JSON.stringify(self.images);
 
     }, function(err) {
       console.log(err);
