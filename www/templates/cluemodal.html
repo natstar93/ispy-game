@@ -11,5 +11,6 @@
     </ul>
     <img class='clue-image' ng-src={{selectedname.image}}>
     <img class='clue-image' ng-src={{selectedname.map}}>
+    <button ng-click="imageService.addImage({{selectedname.index}})">Take Photo</button>
   </ion-content>
 </ion-modal-view>
