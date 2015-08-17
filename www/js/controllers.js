@@ -30,7 +30,6 @@ angular.module('starter.controllers', [])
             image: 'To add image',
             map: 'To add map'
             }
-
     };
 
   $scope.openModal = function(name) {
@@ -52,9 +51,6 @@ angular.module('starter.controllers', [])
   $scope.$on('modal.removed', function() {
     // Execute action
   });
-
-
-
 })
 
 .controller('PhotoAlbumCtrl', function($scope) {});
