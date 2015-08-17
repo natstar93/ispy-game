@@ -9,26 +9,29 @@ angular.module('starter.controllers', [])
   });
 
   var monuments = {
-    shard: {name: 'The Shard',
-            clue1: 'Its pointy',
-            clue2: 'TBC',
-            clue3: 'TBC',
-            image: 'To add image',
-            map: 'To add map'
+    shard: { name: 'The Shard',
+             index: 0,
+             clue1: 'Its pointy',
+             clue2: 'TBC',
+             clue3: 'TBC',
+             image: 'img/the_shard.gif',
+             map: 'img/the_shard_map.gif'
             },
-    taxi: {name: 'Black Cab',
+    taxi: { name: 'Black Cab',
+            index: 1,
             clue1: 'TAXI!',
             clue2: 'TBC',
             clue3: 'TBC',
             image: 'To add image',
             map: 'To add map'
           },
-    bigben: {name: 'Big Ben',
-            clue1: 'Dong',
-            clue2: 'TBC',
-            clue3: 'TBC',
-            image: 'To add image',
-            map: 'To add map'
+    bigben: { name: 'Big Ben',
+              index: 2,
+              clue1: 'Dong',
+              clue2: 'TBC',
+              clue3: 'TBC',
+              image: 'To add image',
+              map: 'To add map'
             }
     };
 

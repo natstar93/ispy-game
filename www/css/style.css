@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .london-images {
   font-size: 0;
   padding: 0;
@@ -19,8 +19,8 @@
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .img-tile {
@@ -31,8 +31,8 @@
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .img-tile {
@@ -44,10 +44,10 @@
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
   .img-tile {
     display: inline;
     height: 365px;
@@ -58,16 +58,16 @@
 /* ----------- iPhone 6+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
   .img-tile {
     display: inline;
     height: 405px;
   }
 }
-=======
+
 /* Empty. Add your own CSS if you like */
 
 .clue-popover {
@@ -87,7 +87,7 @@
 .clue-image {
   height: 8em;
   width: 8em;
-  border-radius: 4em;
+  border-radius: 0.1em;
   box-shadow: 0.6em;
 }
 
@@ -101,4 +101,3 @@
   margin: 1em;
   text-align: center;
 }
->>>>>>> bc65df39fde726a91309a1973fdbe3142f89d772
