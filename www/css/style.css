@@ -105,8 +105,8 @@
 }
 
 .clue-image {
-  height: 8em;
-  width: 8em;
+  height: 12em;
+  width: 12em;
   border-radius: 0.1em;
   box-shadow: 0.6em;
 }
@@ -120,4 +120,18 @@
   border-radius: 0.5em;
   margin: 1em;
   text-align: center;
+}
+.main {
+  width: 400px;
+}
+.row {
+  overflow: hidden;
+}
+.column {
+  width: 136px;
+  float: left;
+}
+img {
+  display: block;
+  float: left;
 }
