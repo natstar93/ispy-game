@@ -30,6 +30,7 @@ angular.module('starter.services', [])
       $state.go('tab.photoalbum');
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
+      window.localStorage.images = JSON.stringify(self.images);
     }, function(err) {
       console.log(err);
     });
