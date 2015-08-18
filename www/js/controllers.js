@@ -10,7 +10,6 @@ angular.module('starter.controllers', ['starter.services'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
-
   var monuments = {
     shard: { name: 'The Shard',
              index: 0,

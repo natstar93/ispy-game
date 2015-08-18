@@ -20,4 +20,9 @@ describe('Changing views', function() {
     var elm = element(by.className('tab-item-active'));
     expect(elm.getAttribute("icon-on")).toContain("ion-images");
   });
+  it('navigates to Modul', function() {
+    shard.click();
+    var elm = element(by.className('tab-item-active'));
+    expect(elm.getAttribute("icon-on")).toContain("ion-images");
+  });
 });
