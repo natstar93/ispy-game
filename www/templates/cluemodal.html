@@ -4,13 +4,26 @@
     <a class="icon icon-right ion-close-round" ng-click="closeModal()"></a>
   </ion-header-bar>
   <ion-content>
-    <ul>
-      <li>{{selectedname.clue1}}</li>
-      <li>{{selectedname.clue2}}</li>
-      <li>{{selectedname.clue3}}</li>
-    </ul>
-    <img class='clue-image' ng-src={{selectedname.image}}>
+    <div class='main'>
+  <div class='row'>
+    <div class='column'>
+      <img class='clue-image' ng-src={{selectedname.image}}>
     <img class='clue-image' ng-src={{selectedname.map}}>
-    <button ng-click="imageService.addImage(selectedname.index)">Take Photo</button>
+    </div>
+    <ul>
+      <h1 align="right">Facts</h1>
+      <li align="right">{{selectedname.clue1}}</li>
+      <li align="right">{{selectedname.clue2}}</li>
+      <li align="right">{{selectedname.clue3}}</li>
+    </ul>
+  </div>
+  <button ng-click="imageService.addImage(selectedname.index)">Take Photo</button>
+</div>
+
   </ion-content>
 </ion-modal-view>
+
+
+
+
+
