@@ -18,24 +18,19 @@ angular.module('starter.services', [])
 
   self.addImage = function(photoIndex) {
 
-    console.log('hello addImage()');
-
     var options = {
       destinationType : Camera.DestinationType.FILE_URI,
-      sourceType : Camera.PictureSourceType.CAMERA, // Camera.PictureSourceType.PHOTOLIBRARY
+      sourceType : Camera.PictureSourceType.CAMERA,
       allowEdit : false,
       encodingType: Camera.EncodingType.JPEG,
       popoverOptions: CameraPopoverOptions,
     };
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
-
+      $state.go('tab.photoalbum');
       self.images[photoIndex] = {url: imageData};
-
       self.placeheldgallery[photoIndex] = {url: imageData};
-
       window.localStorage.images = JSON.stringify(self.images);
-
     }, function(err) {
       console.log(err);
     });

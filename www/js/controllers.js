@@ -4,6 +4,13 @@ angular.module('starter.controllers', ['starter.services'])
 
   $scope.imageService = ImageService;
 
+  $scope.takePhoto = function() {
+    $scope.imageService.addImage($scope.selectedname.index);
+    setTimeout(function(){
+      $scope.closeModal();
+    }, 1000);
+  }
+
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
     scope: $scope,
     animation: 'slide-in-up'
