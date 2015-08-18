@@ -15,6 +15,30 @@
   height: 300px;
 }
 
+.gallery-frame {
+  display: inline-block;
+  background-color:#ffeecc; 
+  height: 250px; 
+  width: 250px; 
+  background-image: url('http://www.wpclipart.com/page_frames/more_frames/gold_frames/gold_frame_square_1.png'); 
+  background-size:100%; 
+  padding:25px; 
+  color:#ffffff; 
+  margin:0 25px;
+  text-align: center;
+}
+
+.thumbnail-container {
+  overflow: hidden!important; 
+  height: 200px; 
+  width: 200px; 
+}
+
+.gallery-thumbnail {
+  max-height: 290px; 
+  max-width: 290px;
+}
+
 
 /* ----------- iPhone 4 and 4S ----------- */
 
