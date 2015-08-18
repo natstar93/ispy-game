@@ -17,7 +17,6 @@
 
 .gallery-frame {
   display: inline-block;
-  float: left;
   background-color:#ffeecc; 
   height: 250px; 
   width: 250px; 
@@ -25,7 +24,7 @@
   background-size:100%; 
   padding:25px; 
   color:#ffffff; 
-  margin:25px;
+  margin:0 25px;
   text-align: center;
 }
 
@@ -37,7 +36,7 @@
 
 .gallery-thumbnail {
   max-height: 290px; 
-  max-width: 290px
+  max-width: 290px;
 }
 
 
