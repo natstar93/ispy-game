@@ -1,8 +1,14 @@
+
 <ion-view view-title="Photo Album">
+<ion-gallery>
   <ion-content>
     <ion-list>
-      <img ng-repeat="image in imageService.placeheldgallery" ng-src="{{image.url}}" height="200px">
+      <img ng-repeat="image in imageService.placeheldgallery" ng-src="{{image.url}}" style="height: 130px">
       {{imageService.placeheldgallery}}
     </ion-list>
   </ion-content>
+ </ion-gallery>
 </ion-view>
+
+
+
