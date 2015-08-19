@@ -81,7 +81,7 @@ angular.module('starter.controllers', ['starter.services'])
    }
    google.maps.event.addDomListener(window, 'load', initialize);
 
-
+// Find my location
    $scope.centerOnMe = function() {
      if(!$scope.map) {
        return;
@@ -92,10 +92,9 @@ angular.module('starter.controllers', ['starter.services'])
        showBackdrop: false
      });
 
-     console.log('Location');
-
      navigator.geolocation.getCurrentPosition(function(pos) {
        $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+       $scope.map.setZoom(16);
        $ionicLoading.hide();
      }, function(error) {
        alert('Unable to get location: ' + error.message);
