@@ -156,3 +156,10 @@
 img.gold-star {
   height: 0.9em;
 }
+
+.floater {
+  position: absolute;;
+  top: 20px;
+  right: 5px;
+  font-size:30px;
+}
