@@ -1,68 +1,132 @@
 .london-images {
-  font-size: 0;
-  padding: 0;
+ font-size: 0;
+ padding: 0;
 }
 
 .image-tile-wrapper {
-  height:100%;
-  overflow: visible;
-  white-space: nowrap;
+ height:100%;
+ overflow: visible;
+ white-space: nowrap;
 }
 
 .img-tile {
-  display: inline;
-  height: 300px;
+ display: inline;
+ height: 300px;
+}
+
+.gallery-frame {
+ display: inline-block;
+ background-color:#ffeecc ;
+ height: 250px;
+ width: 250px;
+ background-image: url('http://www.wpclipart.com/page_frames/more_frames/gold_frames/gold_frame_square_1.png (6KB)
+
+');
+ background-size:100%;
+ padding:25px;
+ color:#ffffff ;
+ margin:0 25px;
+ text-align: center;
+}
+
+.thumbnail-container {
+ overflow: hidden!important;
+ height: 200px;
+ width: 200px;
+}
+
+.gallery-thumbnail {
+ max-height: 290px;
+ max-width: 290px;
 }
 
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-  .img-tile {
-    display: inline;
-    height: 310px;
-  }
+@media only screen
+ and (min-device-width: 320px)
+ and (max-device-width: 480px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ .img-tile {
+   display: inline;
+   height: 310px;
+ }
 }
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-  .img-tile {
-    display: inline;
-    height: 310px;
-  }
+@media only screen
+ and (min-device-width: 320px)
+ and (max-device-width: 568px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ .img-tile {
+   display: inline;
+   height: 310px;
+ }
 }
 
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-  .img-tile {
-    display: inline;
-    height: 365px;
-  }
+@media only screen
+ and (min-device-width: 375px)
+ and (max-device-width: 667px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ .img-tile {
+   display: inline;
+   height: 365px;
+ }
 }
 
 
 /* ----------- iPhone 6+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-  .img-tile {
-    display: inline;
-    height: 405px;
-  }
+@media only screen
+ and (min-device-width: 414px)
+ and (max-device-width: 736px)
+ and (-webkit-min-device-pixel-ratio: 3) {
+ .img-tile {
+   display: inline;
+   height: 405px;
+ }
+}
+
+/* Empty. Add your own CSS if you like */
+
+.clue-popover {
+ width: 90%;
+ border: grey 0.1em solid;
+ border-radius: 0.5em;
+
+}
+
+.clue-pictures {
+ float: right;
+ width: 35%;
+ text-align: center;
+ margin: 1em;
+}
+
+.clue-image {
+ height: 8em;
+ width: 8em;
+ border-radius: 0.1em;
+ box-shadow: 0.6em;
+}
+
+.clue-list{
+ width: 65%
+}
+
+.clue {
+ border: grey 0.1em solid;
+ border-radius: 0.5em;
+ margin: 1em;
+ text-align: center;
+}
+
+.modal-info {
+ text-align: center;
 }

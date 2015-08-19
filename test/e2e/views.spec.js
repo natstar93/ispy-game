@@ -1,7 +1,8 @@
 describe('Changing views', function() {
 
   var photoAlbumNav = element(by.className('tab-nav')).element(by.className('ion-images'));
- 
+  var shard = element(by.css('[ng-click="openModal(\'shard\')"]'));
+
   beforeEach(function() {
     browser.get('http://localhost:8100');
   });
@@ -19,5 +20,11 @@ describe('Changing views', function() {
     photoAlbumNav.click();
     var elm = element(by.className('tab-item-active'));
     expect(elm.getAttribute("icon-on")).toContain("ion-images");
+  });
+
+  it('navigates to Modal', function() {
+    shard.click();
+    var facts_title = element(by.className('facts-title')).getText();
+    expect(facts_title).toEqual('Facts');
   });
 });

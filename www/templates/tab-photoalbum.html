@@ -1,7 +1,12 @@
 <ion-view view-title="Photo Album">
-  <ion-content>
-    <ion-list>
-
-    </ion-list>
-  </ion-content>
+ <ion-content class="padding" style="background-image: url('https://pixabay.com/static/uploads/photo/2013/07/12/18/40/aubergine-153671_640.png')">
+   <ion-scroll direction="x" class="image-tile-wrapper">
+     <ul class="gallery-frame" ng-repeat="image in imageService.placeheldgallery">
+       <li class="thumbnail-container">
+         <img ng-src="{{image.url}}" class="gallery-thumbnail">
+       </li>
+       <span style="color:#ffffff ; font-weight:bold;">Name of Monument</span>
+     </ul>
+   </ion-scroll>
+ </ion-content>
 </ion-view>
