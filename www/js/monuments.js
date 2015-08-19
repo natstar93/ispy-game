@@ -56,7 +56,7 @@ var monuments = [
 
   { name: 'The Gherkin',
             index: 6,
-            points: 20,
+            points: 15,
             clue1: 'It is located on the street of that name, in the City of London, London\’s financial district.',
             clue2: 'A bar on the building\’s top floor offers spectacular views over London.',
             clue3: 'The Gherkin has 18 passenger lifts, reaching speeds of six metres per second.',
