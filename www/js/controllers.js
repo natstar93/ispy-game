@@ -58,22 +58,26 @@ angular.module('starter.controllers', ['starter.services'])
          mapOptions);
 
      //Marker + infowindow + angularjs compiled ng-click
-     var contentString = "<div><a ng-click='clickTest()'>The Shard</a></div>";
-     var compiled = $compile(contentString)($scope);
 
-     var infowindow = new google.maps.InfoWindow({
-       content: compiled[0]
-     });
+    for(var i=0; i < 7; i++) {
+       var contentString = "<div><a ng-click='clickTest()'>Monument</a></div>";
+       var compiled = $compile(contentString)($scope);
 
-      var shardLatlng = new google.maps.LatLng(51.5045,-0.0865);
+       var infowindow = new google.maps.InfoWindow({
+         content: compiled[i]
+       });
 
-     var marker = new google.maps.Marker({
-       position: shardLatlng,
-       map: map,
-       title: 'The Shard'
-     });
+        var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
 
-     google.maps.event.addListener(marker, 'click', function() {
+       var marker = new google.maps.Marker({
+         position: monumentLatlng,
+         map: map,
+         title: monuments[i].name,
+        //  icon: new google.maps.MarkerImage(monuments[i].image)
+       });
+     }
+
+     google.maps.event.addListener('click', function() {
        infowindow.open(map,marker);
      });
 
@@ -93,7 +97,13 @@ angular.module('starter.controllers', ['starter.services'])
      });
 
      navigator.geolocation.getCurrentPosition(function(pos) {
-       $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+       var userLocation = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+       $scope.map.setCenter(userLocation);
+       var marker = new google.maps.Marker({
+         position: userLocation,
+         map: map,
+         title: 'You are here'
+       });
        $scope.map.setZoom(16);
        $ionicLoading.hide();
      }, function(error) {

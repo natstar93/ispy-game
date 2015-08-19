@@ -6,7 +6,9 @@ var monuments = [
            clue2: '95% of the construction materials are recycled.',
            clue3: 'The Shard is the tallest building in Europe.',
            image: 'img/shard.gif.png',
-           map: 'img/the_shard_map.gif'
+           map: 'img/the_shard_map.gif',
+           longitude: 51.5045,
+           latitude: -0.0865
           },
   { name: 'Black Cab',
           index: 1,
@@ -24,16 +26,20 @@ var monuments = [
             clue2: 'The numbers are approximately 60cm long.',
             clue3: 'There are 312 pieces of glass in each clock dial.',
             image: 'img/big_ben.gif.png',
-            map: 'img/big_ben_map.gif.png'
+            map: 'img/big_ben_map.gif.png',
+            longitude: 51.5008,
+            latitude: -0.1247
           },
-   { name: 'London Bridge',
+   { name: 'Tower Bridge',
             index: 3,
             points: 10,
             clue1: 'Tower Bridge has been built at a height of around 42 meters above the Thames River.',
             clue2: 'It took eight years, five major contractors and labor of 432 construction workers to complete the Tower Bridge.',
             clue3: 'Tower Bridge was painted red, white and blue in 1977, as a part of the Queen\'s Silver Jubilee celebrations.',
             image: 'img/bridge.gif.png',
-            map: 'img/bridge_map.gif.png'
+            map: 'img/bridge_map.gif.png',
+            longitude: 51.5056,
+            latitude: -0.0756
           },
   { name: 'Big Red Bus',
             index: 4,
@@ -51,7 +57,9 @@ var monuments = [
             clue2: 'From 2000 to 2012, the London Eye won more than 30 awards, for the best ride, best attraction, experience,design, and many more.',
             clue3: 'The London Eye can carry 800 people each rotation, which is comparable to 11 London red double decker buses.',
             image: 'img/london_eye.gif.png',
-            map: 'img/london_map.gif.png'
+            map: 'img/london_map.gif.png',
+            longitude: 51.5033,
+            latitude: -0.1197
           },
 
   { name: 'The Gherkin',
@@ -61,7 +69,9 @@ var monuments = [
             clue2: 'A bar on the building\’s top floor offers spectacular views over London.',
             clue3: 'The Gherkin has 18 passenger lifts, reaching speeds of six metres per second.',
             image: 'img/mary.gif.png',
-            map: 'img/axe_map.gif.png'
+            map: 'img/axe_map.gif.png',
+            longitude: 51.5144,
+            latitude: -0.0803
           },
 
   ];
