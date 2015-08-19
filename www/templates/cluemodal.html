@@ -1,29 +1,5 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">{{selectedname.name}}</h1>
-    <a class="icon icon-right ion-close-round" ng-click="closeModal()"></a>
-  </ion-header-bar>
-  <ion-content>
-    <div class='main'>
-  <div class='row'>
-    <div class='column'>
-      <img class='clue-image' ng-src={{selectedname.image}}>
-    <img class='clue-image' ng-src={{selectedname.map}}>
-    </div>
-    <ul>
-      <h1 align="right">Facts</h1>
-      <li align="right">{{selectedname.clue1}}</li>
-      <li align="right">{{selectedname.clue2}}</li>
-      <li align="right">{{selectedname.clue3}}</li>
-    </ul>
-  </div>
-  <button ng-click="imageService.addImage(selectedname.index)">Take Photo</button>
-</div>
-
-  </ion-content>
-</ion-modal-view>
-
-
-
-
-
+<div class="modal image-modal transparent" ng-click="closeModal()">
+                 <ion-pane class="transparent">
+                    <img src="img/22.png" alt="Camera" style="float:right;width:600px;height:337px;">
+                 </ion-pane>
+ </div>
