@@ -7,12 +7,10 @@
   <body ng-controller="MapCtrl">
     <ion-header-bar class="bar-dark" >
       <h1 class="title">Map</h1>
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
     </ion-header-bar>
     <ion-content>
-      <div id="map" data-tap-disabled="true">I'm a map</div>
+      <div id="map" data-tap-disabled="true"></div>
     </ion-content>
-    <ion-footer-bar class="bar-dark">
-      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
-    </ion-footer-bar>
   </body>
 </html>

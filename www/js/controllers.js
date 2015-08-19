@@ -46,28 +46,31 @@ angular.module('starter.controllers', ['starter.services'])
 
 .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
    function initialize() {
-     var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+     var myLatlng = new google.maps.LatLng(51.5072,-0.1275);
 
      var mapOptions = {
        center: myLatlng,
-       zoom: 16,
-       mapTypeId: google.maps.MapTypeId.ROADMAP
+       zoom: 12,
+       mapTypeId: google.maps.MapTypeId.ROADMAP,
+       minZoom: 12
      };
      var map = new google.maps.Map(document.getElementById("map"),
          mapOptions);
 
      //Marker + infowindow + angularjs compiled ng-click
-     var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
+     var contentString = "<div><a ng-click='clickTest()'>The Shard</a></div>";
      var compiled = $compile(contentString)($scope);
 
      var infowindow = new google.maps.InfoWindow({
        content: compiled[0]
      });
 
+      var shardLatlng = new google.maps.LatLng(51.5045,-0.0865);
+
      var marker = new google.maps.Marker({
-       position: myLatlng,
+       position: shardLatlng,
        map: map,
-       title: 'Uluru (Ayers Rock)'
+       title: 'The Shard'
      });
 
      google.maps.event.addListener(marker, 'click', function() {
@@ -78,15 +81,18 @@ angular.module('starter.controllers', ['starter.services'])
    }
    google.maps.event.addDomListener(window, 'load', initialize);
 
+
    $scope.centerOnMe = function() {
      if(!$scope.map) {
        return;
      }
 
-     $scope.loading = $ionicLoading.show({
+     $ionicLoading.show({
        content: 'Getting current location...',
        showBackdrop: false
      });
+
+     console.log('Location');
 
      navigator.geolocation.getCurrentPosition(function(pos) {
        $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
