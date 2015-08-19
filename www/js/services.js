@@ -6,10 +6,11 @@ angular.module('starter.services', [])
   self.images = JSON.parse(window.localStorage.images || '[]');
 
   self.placeheldgallery = [];
-
-  for(var i=0; i < 12; i++) {
+  self.gamescore = 0;
+  for(var i=0; i < 6; i++) {
     if(self.images[i]) {
       self.placeheldgallery[i] = self.images[i];
+      self.gamescore += 10;
     }
     else {
       self.placeheldgallery[i] = {url: "img/pigeonplaceholder.gif"};
