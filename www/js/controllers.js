@@ -75,9 +75,9 @@ angular.module('starter.controllers', ['starter.services'])
          title: monuments[i].name,
         //  icon: new google.maps.MarkerImage(monuments[i].image)
        });
-     }
+    }
 
-     google.maps.event.addListener('click', function() {
+     google.maps.event.addListener(marker, 'click', function() {
        infowindow.open(map,marker);
      });
 
@@ -97,13 +97,7 @@ angular.module('starter.controllers', ['starter.services'])
      });
 
      navigator.geolocation.getCurrentPosition(function(pos) {
-       var userLocation = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-       $scope.map.setCenter(userLocation);
-       var marker = new google.maps.Marker({
-         position: userLocation,
-         map: map,
-         title: 'You are here'
-       });
+       $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
        $scope.map.setZoom(16);
        $ionicLoading.hide();
      }, function(error) {
