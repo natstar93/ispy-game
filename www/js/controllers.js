@@ -1,20 +1,26 @@
 angular.module('starter.controllers', ['starter.services'])
 
-.controller('HomeCtrl', function($scope, $ionicModal, ImageService, $state, $cordovaCamera, $cordovaFile) {
+.controller('HomeCtrl', function($scope, $ionicModal, ImageService, ModalService, $state, $cordovaCamera, $cordovaFile) {
 
   $scope.imageService = ImageService;
 
-  $scope.openModal = function() {
-      ImageService
+  $scope.takePhoto = function() {
+    $scope.imageService.addImage($scope.selectedname.index);
+  };
+
+  $scope.openModal = function(name) {
+    $scope.selectedname = monuments[name];
+    $scope.openServiceModal();
+  };
+
+  $scope.openServiceModal = function() {
+      ModalService
         .init('templates/cluemodal.html', $scope)
         .then(function(modal) {
           modal.show();
         });
     };
 
-  // $scope.openModal = function(name) {
-  //   $scope.selectedname = monuments[name];
-  // };
   // $scope.closeModal = function() {
   //   $scope.imageService.modal.hide();
   // };

@@ -1,37 +1,6 @@
 angular.module('starter.services', [])
 
-.service('ImageService', function($state, $rootScope, $ionicModal, $cordovaCamera, $cordovaFile) {
-
-
-  var init = function(tpl, $scope) {
-
-  var promise;
-  $scope = $scope || $rootScope.$new();
-
-  promise = $ionicModal.fromTemplateUrl(tpl, {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-    return modal;
-  });
-
-  $scope.openModal = function() {
-     $scope.modal.show();
-   };
-   $scope.closeModal = function() {
-     $scope.modal.hide();
-   };
-   $scope.$on('$destroy', function() {
-     $scope.modal.remove();
-   });
-
-  return promise;
-  };
-
-
-
-
+.service('ImageService', function($state, $cordovaCamera, $cordovaFile) {
 
   var self = this;
 
@@ -60,7 +29,6 @@ angular.module('starter.services', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $state.go('tab.photoalbum');
-      self.closeModal();
 
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
@@ -70,8 +38,35 @@ angular.module('starter.services', [])
     });
   };
 
+})
+
+.service('ModalService', function($ionicModal, $rootScope) {
+
+  var init = function(tpl, $scope) {
+
+  var promise;
+  $scope = $scope || $rootScope.$new();
+
+  promise = $ionicModal.fromTemplateUrl(tpl, {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+    return modal;
+  });
+
+   $scope.closeModal = function() {
+     $scope.modal.hide();
+   };
+   $scope.$on('$destroy', function() {
+     $scope.modal.remove();
+   });
+
+  return promise;
+  };
+
   return {
     init: init
   };
-  
+
 });
