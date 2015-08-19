@@ -11,7 +11,7 @@ angular.module('starter.services', [])
   for(var i=0; i < 7; i++) {
     if(self.images[i]) {
       self.placeheldgallery[i] = self.images[i];
-      self.totalScore += 10;
+      self.totalScore += monuments[i].points;
     }
     else {
       self.placeheldgallery[i] = {url: "img/pigeonplaceholder.gif"};
@@ -32,7 +32,7 @@ angular.module('starter.services', [])
       $state.go('tab.photoalbum');
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
-      self.totalScore += 10;
+      self.totalScore += monuments[photoIndex].points;
       window.localStorage.images = JSON.stringify(self.images);
     }, function(err) {
       console.log(err);
