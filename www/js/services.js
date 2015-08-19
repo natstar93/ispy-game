@@ -6,8 +6,8 @@ angular.module('starter.services', [])
   self.images = JSON.parse(window.localStorage.images || '[]');
 
   self.placeheldgallery = [];
-  self.gamescore = 0;
-  for(var i=0; i < 6; i++) {
+
+  for(var i=0; i < 7; i++) {
     if(self.images[i]) {
       self.placeheldgallery[i] = self.images[i];
       self.gamescore += 10;
