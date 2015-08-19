@@ -20,7 +20,7 @@
 
 .gallery-frame {
  display: inline-block;
- background-color:#ffeecc ;
+ background-color:#ffeecc;
  height: 250px;
  width: 250px;
  background-image: url('../img/gold_frame_square_1.png');
@@ -101,7 +101,6 @@
  width: 90%;
  border: grey 0.1em solid;
  border-radius: 0.5em;
-
 }
 
 .clue-pictures {
@@ -115,7 +114,6 @@
  height: 8em;
  width: 8em;
  border-radius: 0.1em;
- box-shadow: 0.6em;
 }
 
 .clue-list{
@@ -131,4 +129,8 @@
 
 .modal-info {
  text-align: center;
+}
+
+img.gold-star {
+  height: 0.9em;
 }
