@@ -14,14 +14,16 @@
  height: 300px;
 }
 
+.gallery-container {
+  background-image: url('../img/gallery-bg.png');
+}
+
 .gallery-frame {
  display: inline-block;
  background-color:#ffeecc ;
  height: 250px;
  width: 250px;
- background-image: url('http://www.wpclipart.com/page_frames/more_frames/gold_frames/gold_frame_square_1.png (6KB)
-
-');
+ background-image: url('../img/gold_frame_square_1.png');
  background-size:100%;
  padding:25px;
  color:#ffffff ;

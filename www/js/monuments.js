@@ -1,5 +1,5 @@
-var monuments = {
-  shard: { name: 'The Shard',
+var monuments = [
+  { name: 'The Shard',
            index: 0,
            points: 10,
            clue1: 'The Shard is 309.6 metres (1,016ft) high.',
@@ -8,7 +8,7 @@ var monuments = {
            image: 'img/shard.gif.png',
            map: 'img/the_shard_map.gif'
           },
-  taxi: { name: 'Black Cab',
+  { name: 'Black Cab',
           index: 1,
           points: 10,
           clue1: 'A cab must be tall enough to accommodate someone wearing a bowler hat.',
@@ -17,7 +17,7 @@ var monuments = {
           image: 'img/taxi.gif',
           map: 'img/london_map.gif.png'
         },
-  bigben: { name: 'Big Ben',
+  { name: 'Big Ben',
             index: 2,
             points: 10,
             clue1: 'The minute hands are 4.2 metres long and weigh about 100kg (including counterweights).',
@@ -26,7 +26,7 @@ var monuments = {
             image: 'img/big_ben.gif.png',
             map: 'img/big_ben_map.gif.png'
           },
-  towerbridge: { name: 'London Bridge',
+   { name: 'London Bridge',
             index: 3,
             points: 10,
             clue1: 'Tower Bridge has been built at a height of around 42 meters above the Thames River.',
@@ -35,7 +35,7 @@ var monuments = {
             image: 'img/bridge.gif.png',
             map: 'img/bridge_map.gif.png'
           },
-  bus: { name: 'Big red bus',
+  { name: 'Big Red Bus',
             index: 4,
             points: 10,
             clue1: 'The first London bus service was established in 1829 and ran between Paddington and Bank. It carried 22 people and was pulled by three horses.',
@@ -44,7 +44,7 @@ var monuments = {
             image: 'img/bus.gif.png',
             map: 'img/london_map.gif.png'
           },
-  londoneye: { name: 'London Eye',
+   { name: 'London Eye',
             index: 5,
             points: 10,
             clue1: 'The London Eye is not a Ferris wheel. It\’s the world\’s tallest cantilevered observation wheel',
@@ -54,7 +54,7 @@ var monuments = {
             map: 'img/london_map.gif.png'
           },
 
-  gherkin: { name: 'The Gherkin',
+  { name: 'The Gherkin',
             index: 6,
             points: 10,
             clue1: 'It is located on the street of that name, in the City of London, London\’s financial district.',
@@ -64,4 +64,4 @@ var monuments = {
             map: 'img/axe_map.gif.png'
           },
 
-  };
+  ];

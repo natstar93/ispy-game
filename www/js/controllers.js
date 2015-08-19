@@ -41,4 +41,5 @@ angular.module('starter.controllers', ['starter.services'])
 
 .controller('PhotoAlbumCtrl', function($scope, ImageService, $cordovaCamera, $cordovaFile) {
   $scope.imageService = ImageService;
+  $scope.monumentName = monuments;
 });

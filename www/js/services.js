@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 
   self.placeheldgallery = [];
 
-  for(var i=0; i < 12; i++) {
+  for(var i=0; i < 7; i++) {
     if(self.images[i]) {
       self.placeheldgallery[i] = self.images[i];
     }
