@@ -11,6 +11,11 @@ angular.module('starter.controllers', ['starter.services'])
     }, 1000);
   };
 
+  $scope.checkOpacity = function(index) {
+    if ($scope.imageService.images[index])  {return 1.0;}
+    return 0.2;
+  };
+
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
     scope: $scope,
     animation: 'slide-in-up'
