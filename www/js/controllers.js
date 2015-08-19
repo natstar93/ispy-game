@@ -9,7 +9,12 @@ angular.module('starter.controllers', ['starter.services'])
     setTimeout(function(){
       $scope.closeModal();
     }, 1000);
-  }
+  };
+
+  $scope.checkOpacity = function(index) {
+    if ($scope.imageService.images[index])  {return 1.0;}
+    return 0.2;
+  };
 
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
     scope: $scope,
@@ -17,7 +22,7 @@ angular.module('starter.controllers', ['starter.services'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
-  
+
   $scope.openModal = function(name) {
     $scope.selectedname = monuments[name];
     $scope.modal.show();
