@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  </head>
+  <body ng-controller="MapCtrl">
+    <ion-header-bar class="bar-dark" >
+      <h1 class="title">Map</h1>
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+    </ion-header-bar>
+    <ion-content>
+      <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+  </body>
+</html>
