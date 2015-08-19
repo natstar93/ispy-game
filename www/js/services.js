@@ -13,7 +13,7 @@ angular.module('starter.services', [])
       self.gamescore += 10;
     }
     else {
-      self.placeheldgallery[i] = {url: "img/pigeonplaceholder.gif"};
+      self.placeheldgallery[i] = {url: "img/lockplaceholder.png"};
     }
   }
 
