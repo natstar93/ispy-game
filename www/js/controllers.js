@@ -64,7 +64,7 @@ angular.module('starter.controllers', ['starter.services'])
        var compiled = $compile(contentString)($scope);
 
        var infowindow = new google.maps.InfoWindow({
-         content: compiled[i]
+         content: compiled[0]
        });
 
         var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
@@ -73,7 +73,6 @@ angular.module('starter.controllers', ['starter.services'])
          position: monumentLatlng,
          map: map,
          title: monuments[i].name,
-        //  icon: new google.maps.MarkerImage(monuments[i].image)
        });
     }
 
