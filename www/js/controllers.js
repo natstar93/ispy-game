@@ -39,7 +39,25 @@ angular.module('starter.controllers', ['starter.services'])
   });
 })
 
-.controller('PhotoAlbumCtrl', function($scope, ImageService, $cordovaCamera, $cordovaFile) {
+.controller('PhotoAlbumCtrl', function($scope, $ionicModal, ImageService, $cordovaCamera, $cordovaFile) {
   $scope.imageService = ImageService;
   $scope.monumentName = monuments;
+
+  $ionicModal.fromTemplateUrl('templates/full-image-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  
+  $scope.openModal = function(index) {
+    $scope.galleryImage = $scope.imageService.images[index];
+    if ($scope.galleryImage) {
+      $scope.modal.show();
+    }
+  };
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
 });
