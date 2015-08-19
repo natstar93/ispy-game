@@ -1,8 +1,40 @@
 angular.module('starter.services', [])
 
-.service('ImageService', function($state, $cordovaCamera, $cordovaFile) {
+.service('ImageService', function($state, $rootScope, $ionicModal, $cordovaCamera, $cordovaFile) {
+
+
+  var init = function(tpl, $scope) {
+
+  var promise;
+  $scope = $scope || $rootScope.$new();
+
+  promise = $ionicModal.fromTemplateUrl(tpl, {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+    return modal;
+  });
+
+  $scope.openModal = function() {
+     $scope.modal.show();
+   };
+   $scope.closeModal = function() {
+     $scope.modal.hide();
+   };
+   $scope.$on('$destroy', function() {
+     $scope.modal.remove();
+   });
+
+  return promise;
+  };
+
+
+
+
 
   var self = this;
+
   self.images = JSON.parse(window.localStorage.images || '[]');
 
   self.placeheldgallery = [];
@@ -28,6 +60,8 @@ angular.module('starter.services', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $state.go('tab.photoalbum');
+      self.closeModal();
+
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
       window.localStorage.images = JSON.stringify(self.images);
@@ -35,4 +69,9 @@ angular.module('starter.services', [])
       console.log(err);
     });
   };
+
+  return {
+    init: init
+  };
+  
 });

@@ -4,30 +4,23 @@ angular.module('starter.controllers', ['starter.services'])
 
   $scope.imageService = ImageService;
 
-  $scope.takePhoto = function() {
-    $scope.imageService.addImage($scope.selectedname.index);
-    setTimeout(function(){
-      $scope.closeModal();
-    }, 1000);
-  }
+  $scope.openModal = function() {
+      ImageService
+        .init('templates/cluemodal.html', $scope)
+        .then(function(modal) {
+          modal.show();
+        });
+    };
 
-  $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-  
-  $scope.openModal = function(name) {
-    $scope.selectedname = monuments[name];
-    $scope.modal.show();
-  };
-  $scope.closeModal = function() {
-    $scope.modal.hide();
-  };
+  // $scope.openModal = function(name) {
+  //   $scope.selectedname = monuments[name];
+  // };
+  // $scope.closeModal = function() {
+  //   $scope.imageService.modal.hide();
+  // };
   //Cleanup the modal when we're done with it!
   $scope.$on('$destroy', function() {
-    $scope.modal.remove();
+    $scope.imageService.modal.remove();
   });
   // Execute action on hide modal
   $scope.$on('modal.hidden', function() {
