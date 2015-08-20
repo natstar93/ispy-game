@@ -1,6 +1,8 @@
 .london-images {
  font-size: 0;
  padding: 0;
+ background-image: url('../img/background_skyline.gif');
+ background-repeat: repeat-x;
 }
 
 .image-tile-wrapper {
