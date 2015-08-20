@@ -86,16 +86,11 @@ angular.module('starter.controllers', ['starter.services'])
 
     var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
 
-    var monument_icon = {
-         url: monuments[i].image,
-         scaledSize: new google.maps.Size(50,50)
-       };
-
        var marker = new google.maps.Marker({
          position: monumentLatlng,
          map: map,
          title: monuments[i].name,
-         icon: monument_icon
+        //  icon: monuments[i].icon
        });
     }
 
