@@ -1,6 +1,8 @@
 .london-images {
  font-size: 0;
  padding: 0;
+ background-image: url('../img/background_skyline.gif');
+ background-repeat: repeat-x;
 }
 
 .image-tile-wrapper {
@@ -14,14 +16,16 @@
  height: 300px;
 }
 
+.gallery-container {
+  background-image: url('../img/gallery-bg.png');
+}
+
 .gallery-frame {
  display: inline-block;
- background-color:#ffeecc ;
+ background-color:#ffeecc;
  height: 250px;
  width: 250px;
- background-image: url('http://www.wpclipart.com/page_frames/more_frames/gold_frames/gold_frame_square_1.png (6KB)
-
-');
+ background-image: url('../img/gold_frame_square_1.png');
  background-size:100%;
  padding:25px;
  color:#ffffff ;
@@ -40,6 +44,28 @@
  max-width: 290px;
 }
 
+.gallery-full-image {
+  max-width: 100%;
+  max-height: 100%;
+  text-align:center;
+  overflow:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+.gallery-modal-container {
+  text-align: center;
+}
+
+.close-image {
+  position:fixed;
+  font-size: 30px;
+  top:5px;
+  left:5px;
+}
 
 /* ----------- iPhone 4 and 4S ----------- */
 
@@ -99,7 +125,6 @@
  width: 90%;
  border: grey 0.1em solid;
  border-radius: 0.5em;
-
 }
 
 .clue-pictures {
@@ -113,7 +138,6 @@
  height: 8em;
  width: 8em;
  border-radius: 0.1em;
- box-shadow: 0.6em;
 }
 
 .clue-list{
@@ -129,4 +153,24 @@
 
 .modal-info {
  text-align: center;
+}
+
+img.gold-star {
+  height: 0.9em;
+}
+
+.floater {
+  position: absolute;;
+  top: 20px;
+  right: 5px;
+  font-size:30px;
+}
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }

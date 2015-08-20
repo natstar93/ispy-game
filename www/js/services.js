@@ -6,10 +6,12 @@ angular.module('starter.services', [])
   self.images = JSON.parse(window.localStorage.images || '[]');
 
   self.placeheldgallery = [];
+  self.totalScore = 0;
 
-  for(var i=0; i < 12; i++) {
+  for(var i=0; i < 7; i++) {
     if(self.images[i]) {
       self.placeheldgallery[i] = self.images[i];
+      self.totalScore += monuments[i].points;
     }
     else {
       self.placeheldgallery[i] = {url: "img/pigeonplaceholder.gif"};
@@ -28,6 +30,7 @@ angular.module('starter.services', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $state.go('tab.photoalbum');
+      if (!self.images[photoIndex]) {self.totalScore += monuments[photoIndex].points;}
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
       window.localStorage.images = JSON.stringify(self.images);

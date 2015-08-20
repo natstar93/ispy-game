@@ -1,14 +1,22 @@
 <ion-view name="home" id="home" view-title="iSpy London" class='title'>
   <ion-content class="padding london-images">
     <ion-scroll direction="x" class="image-tile-wrapper">
-      <img src="img/london_01.gif" ng-click="openModal('shard')" alt="London" class="img-tile">
-      <img src="img/london_02.gif" ng-click="openModal('taxi')" alt="London" class="img-tile">
-      <img src="img/london_03.gif" ng-click="openModal('bigben')" alt="London" class="img-tile">
-      <img src="img/london_04.gif" ng-click="openModal('towerbridge')" alt="London" class="img-tile">
-      <img src="img/london_05.gif" ng-click="openModal('bus')" alt="London" class="img-tile">
-      <img src="img/london_06.gif" ng-click="openModal('londoneye')" alt="London" class="img-tile">
-      <img src="img/london_07.gif" ng-click="openModal('gherkin')" alt="London" class="img-tile">
+      <img src="img/shard.png" ng-click="openModal(0)" alt="London" class="img-tile" style="opacity: {{checkOpacity(0)}}">
+      <img src="img/tree1.png" class="img-tile">
+      <img src="img/taxi.png" ng-click="openModal(1)" alt="London" class="img-tile" style="opacity: {{checkOpacity(1)}}">
+      <img src="img/tree2.png" class="img-tile">
+      <img src="img/big_ben.png" ng-click="openModal(2)" alt="London" class="img-tile" style="opacity: {{checkOpacity(2)}}">
+      <img src="img/tree_guard.png" class="img-tile">
+      <img src="img/tower_bridge.png" ng-click="openModal(3)" alt="London" class="img-tile" style="opacity: {{checkOpacity(3)}}">
+      <img src="img/tree3.png" class="img-tile">
+      <img src="img/bus.png" ng-click="openModal(4)" alt="London" class="img-tile" style="opacity: {{checkOpacity(4)}}">
+      <img src="img/london_eye.png" ng-click="openModal(5)" alt="London" class="img-tile" style="opacity: {{checkOpacity(5)}}">
+      <img src="img/tree4.png" class="img-tile">
+      <img src="img/gherkin.png" ng-click="openModal(6)" alt="London" class="img-tile" style="opacity: {{checkOpacity(6)}}">
+      <img src="img/postbox.png" class="img-tile">
     </ion-scroll>
-
   </ion-content>
+  <div class="floater" background-color="white">
+    {{ imageService.totalScore }} / 120 <img src="img/gold_star.png" class="gold-star">
+  </div>
 </ion-view>
