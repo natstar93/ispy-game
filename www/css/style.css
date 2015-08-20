@@ -62,9 +62,14 @@
 
 .close-image {
   position:fixed;
-  font-size: 30px;
-  top:5px;
-  left:5px;
+  font-size: 50px;
+  top:15px;
+  left:15px;
+}
+
+.monument-name {
+  color:#ffffff;
+  font-weight:bold;
 }
 
 /* ----------- iPhone 4 and 4S ----------- */

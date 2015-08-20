@@ -5,7 +5,7 @@
        <li class="thumbnail-container">
          <img ng-src="{{image.url}}" class="gallery-thumbnail" ng-click="openModal(imageService.placeheldgallery.indexOf(image))">
        </li>
-       <span style="color:#ffffff; font-weight:bold;">{{monumentName[imageService.placeheldgallery.indexOf(image)].name}}</span>
+       <span class="monument-name">{{monumentName[imageService.placeheldgallery.indexOf(image)].name}}</span>
      </ul>
    </ion-scroll>
  </ion-content>
