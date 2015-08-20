@@ -67,8 +67,9 @@ angular.module('starter.controllers', ['starter.services'])
   };
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+.controller('MapCtrl', function($scope, $ionicLoading, $compile, $window) {
    function initialize() {
+     console.log("MapController");
      var myLatlng = new google.maps.LatLng(51.5072,-0.1275);
 
      var mapOptions = {
@@ -99,7 +100,11 @@ angular.module('starter.controllers', ['starter.services'])
 
      $scope.map = map;
    }
-   google.maps.event.addDomListener(window, 'load', initialize);
+
+   angular.element(document).ready(function () {
+     initialize()
+   });
+
 
 // Find my location
    $scope.centerOnMe = function() {
