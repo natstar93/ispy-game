@@ -83,14 +83,8 @@ angular.module('starter.controllers', ['starter.services'])
      //Marker + infowindow + angularjs compiled ng-click
 
     for(var i=0; i < 7; i++) {
-       var contentString = "<div><a ng-click='clickTest()'>Monument</a></div>";
-       var compiled = $compile(contentString)($scope);
 
-       var infowindow = new google.maps.InfoWindow({
-         content: compiled[0]
-       });
-
-        var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
+    var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
 
        var marker = new google.maps.Marker({
          position: monumentLatlng,
