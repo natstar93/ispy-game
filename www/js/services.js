@@ -30,9 +30,9 @@ angular.module('starter.services', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $state.go('tab.photoalbum');
+      if (!self.images[photoIndex]) {self.totalScore += monuments[photoIndex].points;}
       self.images[photoIndex] = {url: imageData};
       self.placeheldgallery[photoIndex] = {url: imageData};
-      self.totalScore += monuments[photoIndex].points;
       window.localStorage.images = JSON.stringify(self.images);
     }, function(err) {
       console.log(err);
