@@ -13,7 +13,7 @@ angular.module('starter.controllers', ['starter.services'])
 
   $scope.checkOpacity = function(index) {
     if ($scope.imageService.images[index])  {return 1.0;}
-    return 0.2;
+    return 0.3;
   };
 
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
