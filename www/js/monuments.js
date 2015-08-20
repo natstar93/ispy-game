@@ -7,6 +7,8 @@ var monuments = [
            clue3: 'The Shard is the tallest building in Europe.',
            image: 'img/shard.png',
            map: 'img/shard_map.png'
+           longitude: 51.5045,
+           latitude: -0.0865
           },
   { name: 'Black Cab',
           index: 1,
@@ -25,8 +27,10 @@ var monuments = [
             clue3: 'There are 312 pieces of glass in each clock dial.',
             image: 'img/big_ben.png',
             map: 'img/big_ben_map.png'
+            longitude: 51.5008,
+            latitude: -0.1247
           },
-   { name: 'London Bridge',
+   { name: 'Tower Bridge',
             index: 3,
             points: 20,
             clue1: 'Tower Bridge has been built at a height of around 42 meters above the Thames River.',
@@ -34,6 +38,8 @@ var monuments = [
             clue3: 'Tower Bridge was painted red, white and blue in 1977, as a part of the Queen\'s Silver Jubilee celebrations.',
             image: 'img/bridge.png',
             map: 'img/bridge_map.png'
+            longitude: 51.5056,
+            latitude: -0.0756
           },
   { name: 'Big Red Bus',
             index: 4,
@@ -52,6 +58,8 @@ var monuments = [
             clue3: 'The London Eye can carry 800 people each rotation, which is comparable to 11 London red double decker buses.',
             image: 'img/london_eye.png',
             map: 'img/london_map.png'
+            longitude: 51.5033,
+            latitude: -0.1197
           },
 
   { name: 'The Gherkin',
@@ -62,6 +70,8 @@ var monuments = [
             clue3: 'The Gherkin has 18 passenger lifts, reaching speeds of six metres per second.',
             image: 'img/axe.png',
             map: 'img/axe_map.png'
+            longitude: 51.5144,
+            latitude: -0.0803
           },
 
   ];
