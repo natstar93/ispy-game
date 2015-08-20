@@ -9,7 +9,12 @@ angular.module('starter.controllers', ['starter.services'])
     setTimeout(function(){
       $scope.closeModal();
     }, 1000);
-  }
+  };
+
+  $scope.checkOpacity = function(index) {
+    if ($scope.imageService.images[index])  {return 1.0;}
+    return 0.2;
+  };
 
   $ionicModal.fromTemplateUrl('templates/cluemodal.html', {
     scope: $scope,
@@ -17,7 +22,7 @@ angular.module('starter.controllers', ['starter.services'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
-  
+
   $scope.openModal = function(name) {
     $scope.selectedname = monuments[name];
     $scope.modal.show();
@@ -39,6 +44,25 @@ angular.module('starter.controllers', ['starter.services'])
   });
 })
 
-.controller('PhotoAlbumCtrl', function($scope, ImageService, $cordovaCamera, $cordovaFile) {
+.controller('PhotoAlbumCtrl', function($scope, $ionicModal, ImageService, $cordovaCamera, $cordovaFile) {
   $scope.imageService = ImageService;
+  $scope.monumentName = monuments;
+
+  $ionicModal.fromTemplateUrl('templates/full-image-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  
+  $scope.openModal = function(index) {
+    $scope.galleryImage = $scope.imageService.images[index];
+    if ($scope.galleryImage) {
+      $scope.modal.show();
+    }
+  };
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
 });
