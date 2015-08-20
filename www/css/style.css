@@ -137,7 +137,7 @@
  padding-left: 30px;
  padding-top: 20px;
  display: block;
- 
+
 }
 
 .clue-image1 {
@@ -145,7 +145,7 @@
  padding-left: 30px;
  padding-top: 0px;
  display: block;
- 
+
 }
 
 .clue-list{
@@ -195,7 +195,7 @@
     height: 200px;
     border-radius: 50%;
     color:black;
-   
+
 }
 .innerTEXT{
     position:absolute;
@@ -208,6 +208,7 @@
     position: absolute;
       top: 40px;
       left: 455px;
+      z-index: 1;
 }
 
 img.gold-star {
