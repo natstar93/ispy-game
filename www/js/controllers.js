@@ -69,7 +69,6 @@ angular.module('starter.controllers', ['starter.services'])
 
 .controller('MapCtrl', function($scope, $ionicLoading, $compile, $window) {
    function initialize() {
-     console.log("MapController");
      var myLatlng = new google.maps.LatLng(51.5072,-0.1275);
 
      var mapOptions = {
@@ -91,6 +90,7 @@ angular.module('starter.controllers', ['starter.services'])
          position: monumentLatlng,
          map: map,
          title: monuments[i].name,
+        //  icon: monuments[i].icon
        });
     }
 
@@ -118,7 +118,19 @@ angular.module('starter.controllers', ['starter.services'])
      });
 
      navigator.geolocation.getCurrentPosition(function(pos) {
-       $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+       var current_location = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+       var user_peg = {
+            url: 'img/user_peg.png',
+            scaledSize: new google.maps.Size(50,50)
+          };
+
+       $scope.map.setCenter(current_location);
+       var user = new google.maps.Marker({
+         position: current_location,
+         map: $scope.map,
+         title: "You are here",
+         icon: user_peg
+       });
        $scope.map.setZoom(16);
        $ionicLoading.hide();
      }, function(error) {
