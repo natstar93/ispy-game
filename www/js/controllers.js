@@ -54,7 +54,7 @@ angular.module('starter.controllers', ['starter.services'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
-  
+
   $scope.openModal = function(index) {
     $scope.galleryImage = $scope.imageService.images[index];
     if ($scope.galleryImage) {
@@ -65,4 +65,68 @@ angular.module('starter.controllers', ['starter.services'])
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
-});
+})
+
+.controller('MapCtrl', function($scope, $ionicLoading, $compile, $window) {
+   function initialize() {
+     console.log("MapController");
+     var myLatlng = new google.maps.LatLng(51.5072,-0.1275);
+
+     var mapOptions = {
+       center: myLatlng,
+       zoom: 12,
+       mapTypeId: google.maps.MapTypeId.ROADMAP,
+       minZoom: 12
+     };
+     var map = new google.maps.Map(document.getElementById("map"),
+         mapOptions);
+
+     //Marker + infowindow + angularjs compiled ng-click
+
+    for(var i=0; i < 7; i++) {
+
+    var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
+
+       var marker = new google.maps.Marker({
+         position: monumentLatlng,
+         map: map,
+         title: monuments[i].name,
+       });
+    }
+
+     google.maps.event.addListener(marker, 'click', function() {
+       infowindow.open(map,marker);
+     });
+
+     $scope.map = map;
+   }
+
+   angular.element(document).ready(function () {
+     initialize()
+   });
+
+
+// Find my location
+   $scope.centerOnMe = function() {
+     if(!$scope.map) {
+       return;
+     }
+
+     $ionicLoading.show({
+       content: 'Getting current location...',
+       showBackdrop: false
+     });
+
+     navigator.geolocation.getCurrentPosition(function(pos) {
+       $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+       $scope.map.setZoom(16);
+       $ionicLoading.hide();
+     }, function(error) {
+       alert('Unable to get location: ' + error.message);
+     });
+   };
+
+   $scope.clickTest = function() {
+     alert('Example of infowindow with ng-click');
+   };
+ });
