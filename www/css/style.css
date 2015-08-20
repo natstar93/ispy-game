@@ -107,9 +107,19 @@
 }
 
 .clue-image {
- height: 8em;
- width: 8em;
- border-radius: 0.1em;
+ height: 145px;
+ padding-left: 30px;
+ padding-top: 20px;
+ display: block;
+ 
+}
+
+.clue-image1 {
+ height: 123px;
+ padding-left: 30px;
+ padding-top: 0px;
+ display: block;
+ 
 }
 
 .clue-list{
@@ -130,10 +140,48 @@
  background: transparent !important;
 }
 .image-modal {
- width: 40% !important;
- height: 40%;
+ width: 100% !important;
+ height: 100%;
  top: 0 !important;
  left: 0 !important;
+}
+/*.facts {
+ font-family: fantasy;
+ position: absolute;
+ background-color: white;
+  left: 360px;
+  top: 100px;
+}
+.fact1 {
+ font-family: fantasy;
+ background-color: white;
+ position: absolute;
+  left: 300px;
+  top: 150px;
+}*/
+
+#circle {
+  position: absolute;
+    background: white;
+    top: 80px;
+    left: 285px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    color:black;
+   
+}
+.innerTEXT{
+    position:absolute;
+    font-family: fantasy;
+    top:35%;
+    left:5%;
+  width: 195px;
+}
+#button{
+    position: absolute;
+      top: 40px;
+      left: 455px;
 }
 
 img.gold-star {
