@@ -1,6 +1,8 @@
 .london-images {
  font-size: 0;
  padding: 0;
+ background-image: url('../img/background_skyline.gif');
+ background-repeat: repeat-x;
 }
 
 .image-tile-wrapper {
@@ -222,3 +224,14 @@ img.gold-star {
   font-size:30px;
 }
 
+<<<<<<< HEAD
+=======
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+>>>>>>> 710f16a1e29d8e02ba00c4c865596cf7aca4ecc9
