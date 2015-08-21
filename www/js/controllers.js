@@ -85,12 +85,16 @@ angular.module('starter.controllers', ['starter.services'])
     for(var i=0; i < 7; i++) {
 
     var monumentLatlng = new google.maps.LatLng(monuments[i].longitude, monuments[i].latitude);
+       var monument_peg = {
+            url: monuments[i].icon,
+            scaledSize: new google.maps.Size(40,60)
+        };
 
        var marker = new google.maps.Marker({
          position: monumentLatlng,
          map: map,
          title: monuments[i].name,
-        //  icon: monuments[i].icon
+         icon: monument_peg
        });
     }
 
