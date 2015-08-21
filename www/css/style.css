@@ -1,7 +1,7 @@
 .london-images {
  font-size: 0;
  padding: 0;
- background-image: url('../img/background_skyline.gif');
+ background-image: url('../img/view1/background_skyline.gif');
  background-repeat: repeat-x;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .gallery-container {
-  background-image: url('../img/background_skyline.gif');
+  background-image: url('../img/view1/background_skyline.gif');
   background-repeat: no-repeat;
 }
 
