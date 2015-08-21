@@ -69,7 +69,7 @@
 }
 
 .monument-name {
-  color:#ffffff;
+  color:#000000;
   font-weight:bold;
 }
 
@@ -182,7 +182,7 @@ left: 0 !important;
 
 #circle {
  position: absolute;
-   background: white;
+ background: white;
    top: 80px;
    left: 285px;
    width: 200px;
