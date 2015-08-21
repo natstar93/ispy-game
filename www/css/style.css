@@ -17,7 +17,8 @@
 }
 
 .gallery-container {
-  background-image: url('../img/gallery-bg.png');
+  background-image: url('../img/background_skyline.gif');
+  background-repeat: no-repeat;
 }
 
 .gallery-frame {
@@ -25,7 +26,7 @@
  background-color:#ffeecc;
  height: 250px;
  width: 250px;
- background-image: url('../img/gold_frame_square_1.png');
+ background-image: url('../img/yellow_frame.gif');
  background-size:100%;
  padding:25px;
  color:#ffffff ;
